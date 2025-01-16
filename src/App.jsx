@@ -1,23 +1,14 @@
-import GsapTo from "./pages/GsapTo"
-import GsapFrom from "./pages/GsapFrom"
-import GsapFromTo from "./pages/GsapFromTo"
-import GsapStagger from "./pages/GsapStagger"
-import GsapTimeline from "./pages/GsapTimeline"
-import GsapScrollTrigger from "./pages/GsapScrollTrigger"
-
-
-
-function App() {
-  
-
+import Navbar from "./components/Navbar"
+import Hero from "./components/Hero"
+import Highlights from "./components/Highlights"
+const App =() =>{
   return (
     <>
-      <GsapTo/>
-      <GsapFrom/>
-      <GsapFromTo/>
-      <GsapStagger/>
-      <GsapTimeline/>
-      <GsapScrollTrigger/>
+      <main className="bg-black">
+        <Navbar/>
+        <Hero/>
+        <Highlights/>
+      </main>
     </>
   )
 }
