@@ -44,7 +44,7 @@ const Features =()=>{
                     </div>
                     <div className="flex-center flex-col sm:px:10">
                         <div className="relative h-[50vh] w-full flex items-center">
-                            <video playsInline preload="none" muted autoPlay id="exploreVideo" className="w-full h-full object-cover object-center" ref={videoRef}>
+                            <video playsInline preload="auto" muted autoPlay id="exploreVideo" className="w-full h-full object-cover object-center" ref={videoRef} onClick={ ()=> videoRef.current.play()}>
                                 <source src={exploreVideo} type="video/mp4"/>
                             </video>
                         </div>
