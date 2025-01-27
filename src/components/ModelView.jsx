@@ -1,9 +1,9 @@
-import React, { Suspense} from "react";
+import React, { Suspense, useRef} from "react";
 import { OrbitControls, PerspectiveCamera, View } from "@react-three/drei";
 import Lights from "./Lights";
 import Iphone from "./Iphone";
 import * as THREE from 'three'
-import Loader from "./Loader";
+import LoaderAnima from './LoaderAnima'
 const ModelView = ({
   index,
   groupRef,
@@ -13,6 +13,8 @@ const ModelView = ({
   item,
   size,
 }) => {
+
+  
   
   return (
     <View
@@ -34,7 +36,7 @@ const ModelView = ({
         position={[0, 0, 0]}
       >
         <Suspense
-          fallback={<Loader/>}
+          fallback={ <LoaderAnima scale={[3,3,3]} position={[0, 0, -1]}/>}
           >
           <Iphone scale={index === 1 ? [15, 15, 15] : [17, 17, 17]} item={item} size={size}/>
         </Suspense>
