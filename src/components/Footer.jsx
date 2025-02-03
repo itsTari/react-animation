@@ -12,11 +12,14 @@ const Footer = () => {
                 <span className='underline text-blue'> +234 81076654 </span> {''} or <span className='underline text-blue'>+234 90632136</span> </p>
             </div>
             <div className='bg-neutral-700 my-5 h-[2px] w-full '/>
-            <div className='flex md:flex-row sm:flex-col md:items-center justify-between'>
-              <p className='font-semibold text-grey text-xs'>copyright @2025 apple inc. all right reserved </p>
-              <div className='flex'>
+            <div className='flex md:flex-row  md:items-center justify-between'>
+              <p className='font-semibold text-grey text-xs w-[50%] sm:w-[25%]'>copyright @2025 apple inc. all right reserved </p>
+              <div className='flex flex-col sm:flex-row md:flex-row'>
                   {footerLinks.map((item)=>(
-                    <li className='list-none text-gray font-bold' key={item.id}> {item} {' '} {item !== footerLinks.length-1 && (<span className='mx-2'> | </span>)}</li>
+                    // <div key={item.id} className='flex flex-col'>
+                        <li className='list-none text-gray font-bold md:border-r sm:border-r border-gray md:mx-1 lg:mx-2 md:px-1' > {item}</li>
+                    // </div>
+                    
                   ))}
               </div>
 
